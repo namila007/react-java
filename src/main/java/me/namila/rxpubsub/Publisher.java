@@ -1,5 +1,6 @@
 package me.namila.rxpubsub;
 
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class Publisher {
@@ -7,6 +8,10 @@ public class Publisher {
 
   public Publisher(String name) {
     this.name = name;
+  }
+
+  public Publisher() {
+    this.name = String.valueOf(LocalTime.now().hashCode());
   }
 
   public String getName() {
